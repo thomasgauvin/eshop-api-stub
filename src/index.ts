@@ -6,7 +6,7 @@ import router from "./api";
 import cors from "cors";
 
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 4000
 
 const options = {
     definition: {
@@ -42,7 +42,7 @@ app.use(cors());
 
 app.use(router);
 
-app.use(express.static('public'))
+app.use("/api", express.static('public'))
 
 app.get('/', (req, res) => {
   res.send('Hello World 2!')
