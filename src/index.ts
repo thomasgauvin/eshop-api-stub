@@ -42,7 +42,7 @@ app.use(cors());
 
 app.use(router);
 
-app.use("/api", express.static('public'))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   res.send('Hello World 2!')

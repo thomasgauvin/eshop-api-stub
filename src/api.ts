@@ -16,7 +16,9 @@ const router = express.Router();
  *         description: Returns a mysterious string.
  */
 router.get("/api/v1/Catalog/items", function (req, res) {
-	res.status(200).json(items)
+	setTimeout(()=> {
+		res.status(200).json(items)
+	}, 500)//simulate long db call
 });
 
 /**

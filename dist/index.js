@@ -34,9 +34,9 @@ const specs = (0, swagger_jsdoc_1.default)(options);
 app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(specs));
 app.use((0, cors_1.default)());
 app.use(api_1.default);
-app.use(express_1.default.static('public'));
+app.use("/api", express_1.default.static('public'));
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World 2!');
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

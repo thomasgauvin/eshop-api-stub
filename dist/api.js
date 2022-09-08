@@ -20,7 +20,7 @@ const router = express_1.default.Router();
 router.get("/api/v1/Catalog/items", function (req, res) {
     setTimeout(() => {
         res.status(200).json(data_1.default);
-    }, 5000);
+    }, 500); //simulate long db call
 });
 /**
  * @openapi
