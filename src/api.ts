@@ -18,7 +18,7 @@ const router = express.Router();
 router.get("/api/v1/Catalog/items", function (req, res) {
 	setTimeout(()=> {
 		res.status(200).json(items)
-	}, 500)//simulate long db call
+	}, 100)//simulate long db call
 });
 
 /**
